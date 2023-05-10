@@ -1,7 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createAction, createReducer} from '@reduxjs/toolkit';
 import { createSlice} from '@reduxjs/toolkit';
-import { myValueSlice} from './myValue/slice'
+import { myValueSlice } from './myValue/slice'
+import { userSlice} from './userSlise'
 
 
 // export const increment = createAction('myValue/increment');
@@ -14,5 +15,6 @@ import { myValueSlice} from './myValue/slice'
 export const store = configureStore({
   reducer: {
     myValue: myValueSlice.reducer,
+    user: userSlice.reducer
   },
 });
